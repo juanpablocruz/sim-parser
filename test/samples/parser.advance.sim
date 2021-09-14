@@ -1,0 +1,5 @@
+with Form MyForm1
+	# esto es un comentario	
+	with properties
+		width 3 columns
+		label "Test form"

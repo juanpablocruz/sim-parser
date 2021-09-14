@@ -1,0 +1,37 @@
+statements	: NEWLINE* expr (NEWLINE+ expr)* NEWLINE
+
+expr		: KEYWORD:with IDENTIFIER (IDENTIFIER) NEWLINE
+			  (NEWLINE+ prop-expr)*
+			: prop-expr
+
+prop-expr	: IDENTIFIER NEWLINE
+			: IDENTIFIER atom NEWLINE
+			: IDENTIFIER atom IDENTIFIER
+			: event-expr
+
+event-expr 	: KEYWORD:when IDENTIFIER 
+			  (assign-expr NEWLINE*)*			
+
+assign-expr	: NEWLINE* KEYWORD:set IDENTIFIER IDENTIFIER KEYWORD:to atom
+			: NEWLINE* KEYWORD:set IDENTIFIER KEYWORD:as (KEYWORD:not) IDENTIFIER
+			: NEWLINE* KEYWORD:set IDENTIFIER KEYWORD:to atom
+			: NEWLINE* (KEYWORD:show|KEYWORD:hide|KEYWORD:disable|KEYWORD:enable|KEYWORD:alert|KEYWORD:update) atom
+			: comp-expr ((KEYWORD:and|KEYWORD:or) comp-expr)*
+
+comp-expr 	: (KEYWORD:not) comp-expr
+			: factor
+
+factor 		: ('-') factor
+			: atom
+
+atom		: INT | FLOAT | STRING | IDENTIFIER
+			: if-expr
+
+if-expr 	: KEYWORD:if assign-expr NEWLINE
+			 (assign-expr)*|if-expr-b|if-expr-c
+
+if-expr-b 	: KEYWORD:else if-expr
+			  (assign-expr)*
+
+if-expr-c 	: KEYWORD:else
+			  (assign-expr)*

@@ -1,0 +1,39 @@
+{
+	"source": {
+	  "include": ["src", "package.json", "README.md"],
+	  "exclude": [],
+	  "includePattern": ".+\\.js(doc)?$",
+	  "excludePattern": "(^|\\/|\\\\)_"
+	},
+	"opts": {
+	  "pedantic": true,
+	  "verbose": true,
+	  "recurse": true,
+	  "private": true,
+	  "destination": "./doc/",
+	  "encoding":"utf8",
+	  "readme": "README.md",
+	  "template": "node_modules/toast-jsdoc",
+	  "tutorials": "./doc/tutorials"
+	},
+	"markdown": {
+	  "parser"   : "gfm",
+	  "hardwrap" : true,
+	  "idIdHeadings": true,
+	  "excludeTags": [ "fileoverview" ]
+	},
+	"plugins": [
+	  "plugins/markdown"
+	],
+	"templates": {
+	  "cleverLinks": true,
+	  "monospaceLinks": true,
+	  "navType": "vertical",
+	  "theme": "cerulean"
+	},
+	"tags": {
+	  "allowUnknownTags": true,
+		  "dictionaries": ["jsdoc","closure"]
+	}
+  }
+  

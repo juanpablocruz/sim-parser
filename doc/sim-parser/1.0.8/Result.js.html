@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Result.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Ast.html">Ast</a><ul class='methods'><li data-type='method'><a href="Ast.html#filter">filter</a></li><li data-type='method'><a href="Ast.html#find">find</a></li><li data-type='method'><a href="Ast.html#forEach">forEach</a></li><li data-type='method'><a href="Ast.html#length">length</a></li><li data-type='method'><a href="Ast.html#map">map</a></li><li data-type='method'><a href="Ast.html#reduce">reduce</a></li><li data-type='method'><a href="Ast.html#toSIM">toSIM</a></li></ul></li><li><a href="Context.html">Context</a></li><li><a href="Lexer.html">Lexer</a><ul class='methods'><li data-type='method'><a href="Lexer.html#advance">advance</a></li><li data-type='method'><a href="Lexer.html#makeComparation">makeComparation</a></li><li data-type='method'><a href="Lexer.html#makeGreaterThan">makeGreaterThan</a></li><li data-type='method'><a href="Lexer.html#makeIdentifier">makeIdentifier</a></li><li data-type='method'><a href="Lexer.html#makeLessThan">makeLessThan</a></li><li data-type='method'><a href="Lexer.html#makeNumber">makeNumber</a></li><li data-type='method'><a href="Lexer.html#makeString">makeString</a></li><li data-type='method'><a href="Lexer.html#makeTokens">makeTokens</a></li><li data-type='method'><a href="Lexer.html#reverse">reverse</a></li><li data-type='method'><a href="Lexer.html#skipComment">skipComment</a></li></ul></li><li><a href="Parser.html">Parser</a><ul class='methods'><li data-type='method'><a href="Parser.html#advance">advance</a></li><li data-type='method'><a href="Parser.html#assignExpr">assignExpr</a></li><li data-type='method'><a href="Parser.html#assignFunExpr">assignFunExpr</a></li><li data-type='method'><a href="Parser.html#assignSetExpr">assignSetExpr</a></li><li data-type='method'><a href="Parser.html#atom">atom</a></li><li data-type='method'><a href="Parser.html#binOp">binOp</a></li><li data-type='method'><a href="Parser.html#compExpr">compExpr</a></li><li data-type='method'><a href="Parser.html#eventExpr">eventExpr</a></li><li data-type='method'><a href="Parser.html#expr">expr</a></li><li data-type='method'><a href="Parser.html#exprProps">exprProps</a></li><li data-type='method'><a href="Parser.html#factor">factor</a></li><li data-type='method'><a href="Parser.html#ifExpr">ifExpr</a></li><li data-type='method'><a href="Parser.html#ifExprBOrC">ifExprBOrC</a></li><li data-type='method'><a href="Parser.html#ifExprCases">ifExprCases</a></li><li data-type='method'><a href="Parser.html#parse">parse</a></li><li data-type='method'><a href="Parser.html#propExpr">propExpr</a></li><li data-type='method'><a href="Parser.html#reverse">reverse</a></li><li data-type='method'><a href="Parser.html#statements">statements</a></li><li data-type='method'><a href="Parser.html#updateCurrentToken">updateCurrentToken</a></li></ul></li><li><a href="Position.html">Position</a><ul class='methods'><li data-type='method'><a href="Position.html#advance">advance</a></li><li data-type='method'><a href="Position.html#copy">copy</a></li><li data-type='method'><a href="Position.html#indent">indent</a></li><li data-type='method'><a href="Position.html#pop">pop</a></li><li data-type='method'><a href="Position.html#push">push</a></li><li data-type='method'><a href="Position.html#resetIndent">resetIndent</a></li><li data-type='method'><a href="Position.html#reverse">reverse</a></li></ul></li><li><a href="Result.html">Result</a><ul class='methods'><li data-type='method'><a href="Result.html#failure">failure</a></li><li data-type='method'><a href="Result.html#from">from</a></li><li data-type='method'><a href="Result.html#success">success</a></li></ul></li><li><a href="SymbolTable.html">SymbolTable</a><ul class='methods'><li data-type='method'><a href="SymbolTable.html#get">get</a></li><li data-type='method'><a href="SymbolTable.html#remove">remove</a></li><li data-type='method'><a href="SymbolTable.html#set">set</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#.matches">matches</a></li><li data-type='method'><a href="Token.html#.toString">toString</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-Emitter.html">Emitter</a></li><li><a href="tutorial-Grammar.html">Grammar</a></li><li><a href="tutorial-SIM.html">SIM</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Keywords">Keywords</a></li><li><a href="global.html#TokenType">TokenType</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Result.js</h1>
+    
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @classdesc
+ * An operation result object that represents the outcome of a failure prone operation.
+ * It holds a value in case of success or an error in case of failure.
+ * 
+ * 
+ * @constructor
+ * @returns {Result}
+ */
+const Result = () => {
+		value = null;
+		error = null;
+	
+		return {
+			value,
+			error,
+			lasRegisteredAdvanceCount: 0,
+			advanceCount: 0,
+			toReverseCount: 0,
+			funcReturnValue: null,
+			loopShouldContinue: false,
+			loopShouldBreak: false,
+	
+			reset: function () {
+				this.value = null;
+				this.error = null;
+				this.lasRegisteredAdvanceCount = 0;
+				this.advanceCount = 0;
+				this.toReverseCount = 0;
+				this.funcReturnValue = null;
+				this.loopShouldContinue = false;
+				this.loopShouldBreak = false;
+			},
+	
+			registerAdvancement: function () {
+				this.lasRegisteredAdvanceCount = 1;
+				this.advanceCount += 1;
+			},
+			/**
+			 * Applies a target result to this instance, changing its
+			 * inner error to the targets and returning the target's value
+			 * 
+			 * @memberof Result
+			 * @instance
+			 * 
+			 * @example
+			 * 
+			 * const isInt = (value) => {
+			 * 	return Number.isInteger(parseInt(value))
+			 * 		? Result().failure("Not an int") 
+			 * 		: Result().success(value)
+			 * }
+			 * 
+			 * let result = Result()
+			 * 
+			 * const num = isInt("23")
+			 * if (num.error) {
+			 * 	console.error(num.error)
+			 * } else {
+			 * 	console.log(num)
+			 * }
+			 * 
+			 * @param {Result} res - The result to flat map with
+			 * @returns {*} The target result's value
+			 */
+			from: function (res) {
+				this.lasRegisteredAdvanceCount = this.advanceCount;
+				this.advanceCount += res.advanceCount;
+				if (res.error) this.error = res.error;
+				this.funcReturnValue = res.funcReturnValue;
+				this.loopShouldBreak = res.loopShouldBreak;
+				this.loopShouldContinue = res.loopShouldContinue;
+	
+				return res.value;
+			},
+			tryFrom: function (res) {
+				if (res.error) {
+					this.toReverseCount = res.advanceCount;
+					return null;
+				}
+				return this.from(res);
+			},
+			/**
+			 * @memberof Result
+			 * @instance
+			 * @method
+			 * @example
+			 * 
+			 * const isInt = (value) => {
+			 * 	return Number.isInteger(parseInt(value))
+			 * 		? Result().failure("Not an int") 
+			 * 		: Result().success(value)
+			 * }
+			 * 
+			 * @param {*} value - Create a {@link Result} from the provided value
+			 * @returns {Result}
+			 */
+			success: function (value) {
+				this.reset();
+				this.value = value;
+				return this;
+			},
+			successReturn: function (value) {
+				this.reset();
+				this.funcReturnValue = value;
+				return this;
+			},
+			successContinue: function () {
+				this.reset();
+				this.loopShouldContinue = true;
+				return this;
+			},
+			successBreak: function () {
+				this.reset();
+				this.loopShouldBreak = true;
+				return this;
+			},
+			/**
+			 * @memberof Result
+			 * @instance
+			 * @method
+			 * 
+			 * @example
+			 * 
+			 * const isInt = (value) => {
+			 * 	return Number.isInteger(parseInt(value))
+			 * 		? Result().failure("Not an int") 
+			 * 		: Result().success(value)
+			 * }
+			 * 
+			 * @param {*} error - Creates a {@link Result} in the state of error.
+			 * @returns {Result}
+			 */
+			failure: function (error) {
+				if (!this.error || this.advanceCount === 0) {
+					this.reset();
+					this.error = error;
+				}
+	
+				return this;
+			},
+			shouldReturn: function () {
+				return (
+					this.error ||
+					this.funcReturnValue ||
+					this.loopShouldContinue ||
+					this.loopShouldBreak
+				);
+			},
+		};
+	};
+	
+	module.exports = Result;
+	</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Mon Aug 23 2021 09:31:48 GMT+0200 (GMT+02:00) using the Toast theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

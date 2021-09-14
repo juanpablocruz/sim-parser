@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Grammar - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Ast.html">Ast</a><ul class='methods'><li data-type='method'><a href="Ast.html#filter">filter</a></li><li data-type='method'><a href="Ast.html#find">find</a></li><li data-type='method'><a href="Ast.html#forEach">forEach</a></li><li data-type='method'><a href="Ast.html#length">length</a></li><li data-type='method'><a href="Ast.html#map">map</a></li><li data-type='method'><a href="Ast.html#reduce">reduce</a></li><li data-type='method'><a href="Ast.html#toSIM">toSIM</a></li></ul></li><li><a href="Context.html">Context</a></li><li><a href="Lexer.html">Lexer</a><ul class='methods'><li data-type='method'><a href="Lexer.html#advance">advance</a></li><li data-type='method'><a href="Lexer.html#makeComparation">makeComparation</a></li><li data-type='method'><a href="Lexer.html#makeGreaterThan">makeGreaterThan</a></li><li data-type='method'><a href="Lexer.html#makeIdentifier">makeIdentifier</a></li><li data-type='method'><a href="Lexer.html#makeLessThan">makeLessThan</a></li><li data-type='method'><a href="Lexer.html#makeNumber">makeNumber</a></li><li data-type='method'><a href="Lexer.html#makeString">makeString</a></li><li data-type='method'><a href="Lexer.html#makeTokens">makeTokens</a></li><li data-type='method'><a href="Lexer.html#reverse">reverse</a></li><li data-type='method'><a href="Lexer.html#skipComment">skipComment</a></li></ul></li><li><a href="Parser.html">Parser</a><ul class='methods'><li data-type='method'><a href="Parser.html#advance">advance</a></li><li data-type='method'><a href="Parser.html#assignExpr">assignExpr</a></li><li data-type='method'><a href="Parser.html#assignFunExpr">assignFunExpr</a></li><li data-type='method'><a href="Parser.html#assignSetExpr">assignSetExpr</a></li><li data-type='method'><a href="Parser.html#atom">atom</a></li><li data-type='method'><a href="Parser.html#binOp">binOp</a></li><li data-type='method'><a href="Parser.html#compExpr">compExpr</a></li><li data-type='method'><a href="Parser.html#eventExpr">eventExpr</a></li><li data-type='method'><a href="Parser.html#expr">expr</a></li><li data-type='method'><a href="Parser.html#exprProps">exprProps</a></li><li data-type='method'><a href="Parser.html#factor">factor</a></li><li data-type='method'><a href="Parser.html#ifExpr">ifExpr</a></li><li data-type='method'><a href="Parser.html#ifExprBOrC">ifExprBOrC</a></li><li data-type='method'><a href="Parser.html#ifExprCases">ifExprCases</a></li><li data-type='method'><a href="Parser.html#parse">parse</a></li><li data-type='method'><a href="Parser.html#propExpr">propExpr</a></li><li data-type='method'><a href="Parser.html#reverse">reverse</a></li><li data-type='method'><a href="Parser.html#statements">statements</a></li><li data-type='method'><a href="Parser.html#updateCurrentToken">updateCurrentToken</a></li></ul></li><li><a href="Position.html">Position</a><ul class='methods'><li data-type='method'><a href="Position.html#advance">advance</a></li><li data-type='method'><a href="Position.html#copy">copy</a></li><li data-type='method'><a href="Position.html#indent">indent</a></li><li data-type='method'><a href="Position.html#pop">pop</a></li><li data-type='method'><a href="Position.html#push">push</a></li><li data-type='method'><a href="Position.html#resetIndent">resetIndent</a></li><li data-type='method'><a href="Position.html#reverse">reverse</a></li></ul></li><li><a href="Result.html">Result</a><ul class='methods'><li data-type='method'><a href="Result.html#failure">failure</a></li><li data-type='method'><a href="Result.html#from">from</a></li><li data-type='method'><a href="Result.html#success">success</a></li></ul></li><li><a href="SymbolTable.html">SymbolTable</a><ul class='methods'><li data-type='method'><a href="SymbolTable.html#get">get</a></li><li data-type='method'><a href="SymbolTable.html#remove">remove</a></li><li data-type='method'><a href="SymbolTable.html#set">set</a></li></ul></li><li><a href="Token.html">Token</a><ul class='methods'><li data-type='method'><a href="Token.html#.matches">matches</a></li><li data-type='method'><a href="Token.html#.toString">toString</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-Emitter.html">Emitter</a></li><li><a href="tutorial-Grammar.html">Grammar</a></li><li><a href="tutorial-SIM.html">SIM</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Keywords">Keywords</a></li><li><a href="global.html#TokenType">TokenType</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: Grammar</h1>
+    
+    <section>
+
+<header>
+    
+
+    <h2>Grammar</h2>
+</header>
+
+<article>
+    <h2>BNF definition</h2>
+<p>This is the <a href="https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form">bnf</a> definition of the SIM syntax.</p>
+<pre class="prettyprint source lang-bnf"><code>statements	: NEWLINE* expr (NEWLINE+ expr)* NEWLINE
+
+expr		: KEYWORD:with IDENTIFIER (IDENTIFIER) NEWLINE
+			  (NEWLINE+ prop-expr)*
+			: prop-expr
+
+prop-expr	: IDENTIFIER NEWLINE
+			: IDENTIFIER atom NEWLINE
+			: IDENTIFIER atom IDENTIFIER
+			: event-expr
+
+event-expr 	: KEYWORD:when IDENTIFIER 
+			  (assign-expr NEWLINE*)*			
+
+assign-expr	: NEWLINE* KEYWORD:set IDENTIFIER IDENTIFIER KEYWORD:to atom
+			: NEWLINE* KEYWORD:set IDENTIFIER KEYWORD:as (KEYWORD:not) IDENTIFIER
+			: NEWLINE* KEYWORD:set IDENTIFIER KEYWORD:to atom
+			: NEWLINE* (KEYWORD:show|KEYWORD:hide|KEYWORD:disable|KEYWORD:enable|KEYWORD:alert|KEYWORD:update) atom
+			: comp-expr ((KEYWORD:and|KEYWORD:or) comp-expr)*
+
+comp-expr 	: (KEYWORD:not) comp-expr
+			: factor
+
+factor 		: ('-') factor
+			: atom
+
+atom		: INT | FLOAT | STRING | IDENTIFIER
+			: if-expr
+
+if-expr 	: KEYWORD:if assign-expr NEWLINE
+			 (assign-expr)*|if-expr-b|if-expr-c
+
+if-expr-b 	: KEYWORD:else if-expr
+			  (assign-expr)*
+
+if-expr-c 	: KEYWORD:else
+			  (assign-expr)*
+</code></pre>
+<h2>Structure properties</h2>
+<h3>Flow control syntax</h3>
+<p>SIM has the ability to define flow control expressions as well as comparisons and unary operations.</p>
+<p>You can write flow control statements like this:</p>
+<pre class="prettyprint source"><code>if expr
+	statement
+	statement
+else if expr
+	statement
+	statement
+else
+	statement
+	statement
+</code></pre>
+<p>Inside each if, else if or else block may contain 1 or more statements.<br>
+Every expresion may be as complex as desired while using the following syntax:</p>
+<h3>Comparisons syntax</h3>
+<ul>
+<li>Equality comparison:</li>
+</ul>
+<pre class="prettyprint source"><code>if property is number|identifier|string
+</code></pre>
+<ul>
+<li>Greater than, greater than equal, less than, less than equal:</li>
+</ul>
+<pre class="prettyprint source"><code>if property is &lt; 0
+if property is > 0
+if property is &lt;= 0
+if property is >= 0
+</code></pre>
+<h3>Unary operations syntax</h3>
+<pre class="prettyprint source"><code>if property is not &quot;red&quot;
+if property is not > -7
+</code></pre>
+<h3>Logic operations:</h3>
+<pre class="prettyprint source"><code>if property is > 3 and property is not &lt; 2
+if property is > 3 or property is &lt; 1
+</code></pre>
+<h2>Keywords</h2>
+<p>The language has the following reserved keywords:</p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>is</td>
+<td>Used for comparisons</td>
+</tr>
+<tr>
+<td>match</td>
+<td>Used for pattern matching</td>
+</tr>
+<tr>
+<td>with</td>
+<td>Describes a new element or property of element</td>
+</tr>
+<tr>
+<td>when</td>
+<td>Describes a new event block</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Used with <em>set</em> keyword to mark the target value</td>
+</tr>
+<tr>
+<td>if</td>
+<td>Flow controll keyword</td>
+</tr>
+<tr>
+<td>else</td>
+<td>Flow controll keyword, may be followed by <em>if</em> for multi-option structure</td>
+</tr>
+<tr>
+<td>or</td>
+<td>Binary operator</td>
+</tr>
+<tr>
+<td>and</td>
+<td>Binary operator</td>
+</tr>
+<tr>
+<td>not</td>
+<td>Unary operator</td>
+</tr>
+<tr>
+<td>as</td>
+<td>Used with <em>set</em> keyword to mark the soure entity</td>
+</tr>
+<tr>
+<td>set</td>
+<td>Keyword for assigning new values</td>
+</tr>
+<tr>
+<td>show, hide, disable, enable, alert, update</td>
+<td>Toggle properties</td>
+</tr>
+</tbody>
+</table>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Mon Aug 23 2021 09:31:48 GMT+0200 (GMT+02:00) using the Toast theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

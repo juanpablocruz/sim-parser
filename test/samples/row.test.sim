@@ -1,0 +1,49 @@
+with Form MyForm
+	with Row row1
+		with properties
+			width 2
+		with Row row0
+			with properties
+				width 2
+		
+			with TextBox Whoareyou
+				with properties
+					label "Who are you?"
+				with interactions
+					when changes
+						update value
+		
+			with TextBox Nare
+				with properties
+					label "Nare"
+				with interactions
+					when changes
+						update value
+		with Image Image
+			with properties
+				source "placeholder"
+
+	with Label Somethingelse
+		with properties
+			label "something else"
+
+	with Paragraph Paragraph
+		with properties
+			label ""
+	with Row row3
+		with properties
+			width 2
+		with Row row2
+			with properties
+				width 2
+		
+			with Label DateofBirth
+				with properties
+					label "Date of Birth"
+		
+			with Button Button
+				with properties
+					label ""
+		with Button TOK
+			with properties
+				label "TOK"'
