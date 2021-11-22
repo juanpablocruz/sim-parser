@@ -36,7 +36,7 @@ Each emmitter is supposed to be a plugin on its own and will be hosted on its ow
 Please refer to the [grammar description file](/doc/tutorials/Grammar.md) for a formal description of the grammar
 
 ## Documentation
-You can check out the documentation in [here](https://dev.azure.com/sgs-swacoe-projects/SGS%20Pickles%20Jar/_wiki/wikis/SGS-Pickles-Jar.wiki/1222/SIM)
+You can check out the documentation in [the /docs folder](https://github.com/juanpablocruz/sim-parser/tree/main/doc)
 ## Built with
 - Javascript
 
