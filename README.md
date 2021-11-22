@@ -28,8 +28,8 @@ That AST is then ment to be used as input for the different emmitters (React, Vu
 
 Each emmitter is supposed to be a plugin on its own and will be hosted on its own repository:
 
-- [react emitter](https://dev.azure.com/sgs-swacoe-projects/SGS%20Pickles%20Jar/_git/SIM-emitter-react)
-- [csharp emitter](https://dev.azure.com/sgs-swacoe-projects/SGS%20Pickles%20Jar/_git/SIM-emitter-csharp)
+- [react emitter](https://github.com/juanpablocruz/sim-emitter-react)
+- [csharp emitter](https://github.com/juanpablocruz/sim-emitter-csharp)
 
 ## Grammar
 
